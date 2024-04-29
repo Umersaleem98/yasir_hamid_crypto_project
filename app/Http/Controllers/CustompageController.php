@@ -9,7 +9,7 @@ class CustompageController extends Controller
     public function acadmey_home()
     {
 
-        return view('template.custom');
+        return view('template.category_page');
     }
 
     public function SQA_type()

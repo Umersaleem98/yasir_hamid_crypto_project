@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CoinController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
@@ -91,5 +92,10 @@ Route::get('/live-prices', [CoinController::class, 'getLivePrices']);
 Route::get('/trending-coins', [CoinController::class, 'getTrendingCoins']);
 Route::get('/crypto_table', [CoinController::class, 'crypto_table']);
 
-Route::get('/abc', [CustompageController::class, 'acadmey_home']);
+Route::get('/category_page', [CustompageController::class, 'acadmey_home']);
 Route::get('/sqa_type', [CustompageController::class, 'SQA_type']);
+
+Route::get('/categories', [CategoryController::class, 'create']);
+Route::post('/categories_store', [CategoryController::class, 'store']);
+Route::get('/categorylist', [CategoryController::class, 'category_list']);
+Route::delete('/categories_delete/{id}', [CategoryController::class, 'destroy']);
