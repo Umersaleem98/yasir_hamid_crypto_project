@@ -28,4 +28,6 @@ class HomeController extends Controller
     }
         return view('template.preview_project_home', ['projects' => $projects]);
     }
+
+    
 }

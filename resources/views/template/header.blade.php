@@ -24,6 +24,12 @@
                   <li><a href="#">Interview Questions</a></li>
                 </ul>
               </li>
+              <li class="dropdown"><a href="#"><span>acadmey home</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{url('abc')}}">Academy_file</a></li>
+                  <li><a href="{{url('sqa_type')}}">SQA Type</a></li>
+                </ul>
+              </li>
 
               <li class="dropdown"><a href="#"><span>Content Writing</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
@@ -81,27 +87,18 @@
               <li class="dropdown"><a href="#"><span>Machine Learning</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Introduction</a></li>
-                  <!-- <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li> -->
+
                 </ul>
               </li>
 
               <li class="dropdown"><a href="#"><span>Artificial Intelligence</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Introduction</a></li>
-                  <!-- <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li> -->
+
                 </ul>
               </li>
 
 
-               <!-- <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li> -->
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Crypto</span> <i class="bi bi-chevron-down"></i></a>
