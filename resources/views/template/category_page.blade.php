@@ -95,64 +95,19 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="heading-box" style="text-align: center;">
-                <h6 style="text-align: center;">What do you need to Learn?</h6>
+                    <h6 style="text-align: center;">What do you need to Learn?</h6>
                 </p>
                 <hr>
             </div>
+            @foreach ($category as $cate)
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="{{url('crypto_table')}}">Software Quality Assurance</a>
+                    <img src="{{ asset('images/umer/' . $cate->images) }}" alt="{{ $cate->images }}" >
+                    {{-- <a href="{{ url('subcategory_page') }}">{{ $cate->name }}</a> --}}
+                    <a href="{{ url('subcategory_page', ['id' => $cate->id]) }}">{{ $cate->name }}</a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="link_to_page_2">Social Media Marketing</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="link_to_page_3">Content Writing</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="{{url('crypto_table')}}">Search Engine Optimization</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="{{url('crypto_table')}}">Finance</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="{{url('crypto_table')}}">AWS Web Services</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="{{url('crypto_table')}}">Machine Learing</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="{{url('crypto_table')}}">Artifical Intelligence</a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="custom-col">
-                    <img src="{{ asset('products/1711588263_WhatsApp Image 2024-03-08 at 1.43.56 PM.jpeg') }}" alt="Image Description">
-                    <a href="{{url('crypto_table')}}">Microsoft Excel</a>
-                </div>
-            </div>
+            @endforeach
             <!-- Add more columns here with images and content -->
         </div>
     </div>

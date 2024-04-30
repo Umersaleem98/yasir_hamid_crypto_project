@@ -74,4 +74,21 @@ class CategoryController extends Controller
     return redirect()->back()->with('success', 'Category and subcategories deleted successfully.');
 }
 
+
+public function Subcategory($id)
+{
+    // Find the subcategory by ID
+    $subcategory = Subcategory::find($id);
+
+    // Check if subcategory exists
+    if (!$subcategory) {
+        abort(404); // Or handle the case when the subcategory doesn't exist
+    }
+
+    // Get all categories
+    $categories = Category::with('subcategories')->get();
+
+    // Pass all categories and the specific subcategory data to the view
+    return view('template.subcategory', ['subcategory' => $subcategory, 'categories' => $categories]);
+}
 }
