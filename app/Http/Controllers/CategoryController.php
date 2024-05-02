@@ -19,23 +19,23 @@ class CategoryController extends Controller
     $validatedData = $request->validate([
         'category_name' => 'required|string|max:255',
         'subcategory_name' => 'required|string|max:255',
-        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validate single image file
         'description' => 'required|string', // Add validation for description
+        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validate single image file
     ]);
 
     if ($request->hasFile('image')) {
         $image = $request->file('image');
         $imageName = $image->getClientOriginalName();
-        $categoryName = $validatedData['category_name'];
         $description = $validatedData['description'];
+        $categoryName = $validatedData['category_name'];
 
         // Move the uploaded file to the public/images/{category_name} directory
         $image->move(public_path('images/' . $categoryName), $imageName);
 
         $category = Category::create([
             'name' => $validatedData['category_name'],
-            'images' => $imageName, // Store the image name in the database
             'description' => $description, // Store the description in the database
+            'images' => $imageName, // Store the image name in the database
         ]);
 
         $subcategory = Subcategory::create([
@@ -43,7 +43,7 @@ class CategoryController extends Controller
             'category_id' => $category->id,
         ]);
 
-        return view('layouts.category_add')->with('success', 'Category and subcategories added successfully.');
+        return redirect()->back()->with('success', 'Category added successfully!');
     } else {
         // Handle if no image was uploaded
         return back()->withInput()->withErrors(['image' => 'Please upload an image.']);
