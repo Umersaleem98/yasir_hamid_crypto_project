@@ -94,6 +94,7 @@ Route::get('/crypto_table', [CoinController::class, 'crypto_table']);
 
 Route::get('/category_page', [CustompageController::class, 'acadmey_home']);
 Route::get('/sqa_type', [CustompageController::class, 'SQA_type']);
+Route::get('/guide_screen_home', [CustompageController::class, 'Guide_screen']);
 
 
 Route::get('/categories', [CategoryController::class, 'create']);

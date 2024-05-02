@@ -20,6 +20,10 @@ class CustompageController extends Controller
     }
 
 
+    public function Guide_screen()
+    {
+        return view('template.guide_screen');
+    }
 
 
 }

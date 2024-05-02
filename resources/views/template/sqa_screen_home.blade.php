@@ -185,25 +185,25 @@ body {
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="custom-col">
-                    <img src="{{ asset() }}" alt="Image Description">
+                    <img src="" alt="Image Description">
                     <a href="{{url('crypto_table')}}">menual Testing</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="custom-col">
-                    <img src="{{ asset() }}" alt="Image Description">
+                    <img src="" alt="Image Description">
                     <a href="link_to_page_2">APA Testing</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="custom-col">
-                    <img src="{{ asset() }}" alt="Image Description">
+                    <img src="" alt="Image Description">
                     <a href="link_to_page_3">Data Base Testing</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="custom-col">
-                    <img src="{{ asset() }}" alt="Image Description">
+                    <img src="" alt="Image Description">
                     <a href="{{url('crypto_table')}}">Automation Testing</a>
                 </div>
             </div>

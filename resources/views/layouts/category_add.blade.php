@@ -71,6 +71,10 @@
                                                         <input type="text" name="category_name" id="category_name" class="form-control" required>
                                                     </div>
                                                     <div class="form-group">
+                                                        <label for="description">Description:</label>
+                                                        <textarea name="description" id="description" class="form-control" required></textarea>
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label for="subcategory_name">Subcategory Name:</label>
                                                         <input type="text" name="subcategory_name" id="subcategory_name" class="form-control" required>
                                                     </div>

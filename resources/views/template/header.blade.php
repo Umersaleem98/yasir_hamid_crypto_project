@@ -28,6 +28,7 @@
                 <ul>
                   <li><a href="{{url('category_page')}}">Academy_file</a></li>
                   <li><a href="{{url('sqa_type')}}">SQA Type</a></li>
+                  <li><a href="{{url('guide_screen_home')}}">Guide</a></li>
                 </ul>
               </li>
 
