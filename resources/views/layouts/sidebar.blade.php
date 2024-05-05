@@ -20,7 +20,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>{{ auth()->user()->name }}-Dashboard</span></a>
+            <span>{{ auth()->user()->name }}Dashboard</span></a>
     </li>
 
     <!-- Divider -->

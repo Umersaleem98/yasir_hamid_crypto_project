@@ -29,9 +29,8 @@
 
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    <h1 class="h3 mb-0 text-primary">Add Category</h1>
+                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                 </div>
 
                 <!-- Content Row -->
@@ -47,7 +46,8 @@
                         <div class="row justify-content-center">
                             <div class="col-md-12">
                                 <div class="card">
-                                    <div class="card-header">Add Category</div>
+                                    <div class="card-header text-primary">Add Category</div>
+
                                     @if(session('success'))
                                     <div class="alert alert-success">
                                         {{ session('success') }}
@@ -66,20 +66,20 @@
                                                 <form action="{{ url('categories_store') }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="form-group">
-                                                        <label for="category_name">Category Name:</label>
-                                                        <input type="text" name="category_name" id="category_name" class="form-control" required>
+                                                        {{-- <label for="category_name">Category Name:</label> --}}
+                                                        <input type="text" name="category_name" id="category_name" placeholder="Category Name" class="form-control" required>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="description">Description:</label>
-                                                        <textarea name="description" id="description" class="form-control" required></textarea>
+                                                        {{-- <label for="description">Description:</label> --}}
+                                                        <textarea name="description" id="description" class="form-control" placeholder="description" required></textarea>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="subcategory_name">Subcategory Name:</label>
-                                                        <input type="text" name="subcategory_name" id="subcategory_name" class="form-control" required>
+                                                        {{-- <label for="subcategory_name">Subcategory Name:</label> --}}
+                                                        <input type="text" name="subcategory_name" id="subcategory_name" placeholder="subcategory name" class="form-control" required>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="image">Image:</label>
-                                                        <input type="file" name="image" id="image" class="form-control" required>
+                                                        {{-- <label for="image">Image:</label> --}}
+                                                        <input type="file" name="image" id="image" placeholder="image " class="form-control" required>
                                                     </div>
                                                     <button type="submit" class="btn btn-primary">Submit</button>
                                                 </form>

@@ -63,7 +63,7 @@ th {
                         <div class="row justify-content-center">
                             <div class="col-md-12">
                                 <div class="card">
-                                    <div class="card-header">Create New Project</div>
+                                    <div class="card-header text-primary">Project List</div>
 
                                     @if(session('success'))
                                     <div class="alert alert-success">
