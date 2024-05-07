@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Company;
-use App\Models\Developer;
-use App\Models\PrivateInvestor;
 use App\Models\Project;
+use App\Models\Promoter;
+use App\Models\Developer;
 use App\Models\ProjectType;
 use Illuminate\Http\Request;
 use App\Models\TakenStandard;
+use App\Models\PrivateInvestor;
 use App\Models\ProjectCategory;
-use App\Models\Promoter;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -159,4 +161,90 @@ class AdminController extends Controller
         return view('template.guide_screen');
     }
 
+    public function user_list()
+    {
+        $users = User::all();
+        return view('layouts.userslist', compact('users'));
+    }
+    public function user_add()
+    {
+        return view('layouts.add_users');
+    }
+
+    public function user_store(Request $request)
+    {
+        $hashedPassword = Hash::make($request->password);
+        $employee = new User();
+        $employee->name = $request->name;
+        $employee->email = $request->email;
+        $employee->phone = $request->phone;
+        $employee->password = $hashedPassword;
+        $employee->save();
+        return redirect()->back()->with('success', 'Employee registered successfully!');
+        // return view('layouts.add_users', compact('users'));
+    }
+
+    public function user_edit($id)
+{
+    $user = User::find($id);
+
+    if (!$user) {
+        return redirect()->back()->with('error', 'User not found');
+    }
+
+    return view('layouts.user_edit', ['user' => $user]);
+}
+
+
+    public function update_user(Request $request, $id)
+    {
+        // Find the user by ID
+        $user = User::find($id);
+
+        // Check if user exists
+        if (!$user) {
+            return redirect()->back()->with('error', 'User not found');
+        }
+
+        // Validate the request data
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,'.$user->id,
+            'phone' => 'required|string|max:20',
+            'password' => 'nullable|string|min:8', // Password is optional, adjust validation as needed
+            'user_type' => 'required|string|in:admin,manager,user', // Validate user_type values
+        ]);
+
+        // Update user information
+        $user->name = $validatedData['name'];
+        $user->email = $validatedData['email'];
+        $user->phone = $validatedData['phone'];
+        $user->user_type = $validatedData['user_type']; // Update user_type
+
+        // Update password if provided
+        if ($request->filled('password')) {
+            $user->password = Hash::make($validatedData['password']); // Hash the new password
+        }
+
+        // Save changes
+        $user->save();
+
+        return redirect()->back()->with('success', 'User updated successfully!');
+    }
+
+    public function delete_user($id)
+    {
+        // Find the user by ID
+        $user = User::find($id);
+
+        // Check if user exists
+        if (!$user) {
+            return redirect()->back()->with('error', 'User not found');
+        }
+
+        // Delete the user
+        $user->delete();
+
+        return redirect()->back()->with('success', 'User deleted successfully!');
+    }
 }

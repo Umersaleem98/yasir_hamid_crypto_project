@@ -9,9 +9,9 @@ class ProjectCategoryController extends Controller
 {
     public function store(Request $request)
     {
-        $category = new ProjectCategory();
-        $category->categoryName = $request->categoryName;
-        $category->save();
+        $project_category = new ProjectCategory();
+        $project_category->project_category = $request->project_category;
+        $project_category->save();
 
         return redirect()->back()->with('success', 'Category created successfully.');
     }

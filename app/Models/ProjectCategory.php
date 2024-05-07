@@ -10,6 +10,6 @@ class ProjectCategory extends Model
     use HasFactory;
 
     protected $fillable = [
-        'categoryName',
+        'project_category',
     ];
 }

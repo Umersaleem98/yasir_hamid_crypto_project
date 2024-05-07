@@ -56,6 +56,14 @@ Route::get('/delete_project/{id}', [AdminController::class, 'delete_project'])->
 Route::get('/approve_project/{id}', [AdminController::class, 'approve'])->name('approve_project');
 Route::get('/edit_product/{id}', [AdminController::class, 'edit_product'])->name('edit_product');
 
+Route::get('/users', [AdminController::class, 'user_list']);
+Route::get('/add_users', [AdminController::class, 'user_add']);
+Route::post('/add_users', [AdminController::class, 'user_store']);
+
+Route::get('/edit_users/{id}', [AdminController::class, 'user_edit']);
+Route::post('/update_users/{id}', [AdminController::class, 'update_user']);
+Route::get('/delete_users/{id}', [AdminController::class, 'delete_user']);
+
 // user side routes
 
 Route::get('/add_project_user', [UsersideController::class, 'add_project_user'])->name('add_project_user');

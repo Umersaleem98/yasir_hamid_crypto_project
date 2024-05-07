@@ -90,6 +90,21 @@
         </div>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#user"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>User</span>
+        </a>
+        <div id="user" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Users</h6>
+                <a class="collapse-item" href="{{url('add_users')}}">Add User</a>
+                <a class="collapse-item" href="{{url('users')}}">Users List</a>
+            </div>
+        </div>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
@@ -140,7 +155,7 @@
                     @csrf
                     <div class="mb-3">
                       <label  class="form-label">Enter a project Category</label>
-                      <input type="text" class="form-control"  name="categoryName" required>
+                      <input type="text" class="form-control"  name="project_category" required>
                     </div>
                     <button type="submit" name="submit" class="btn btn-primary">Add</button>
                   </form>
