@@ -99,6 +99,10 @@ Route::get('/preview_project_home/{id}', [HomeController::class, 'preview_projec
 Route::get('/live-prices', [CoinController::class, 'getLivePrices']);
 Route::get('/trending-coins', [CoinController::class, 'getTrendingCoins']);
 Route::get('/crypto_table', [CoinController::class, 'crypto_table']);
+Route::get('/currency_filter', [CoinController::class, 'currencyFilter']);
+Route::get('/coins_list', [CoinController::class, 'coinsList']);
+Route::get('/coin_details', [CoinController::class, 'getCoinsDetails']);
+
 
 Route::get('/category_page', [CustompageController::class, 'acadmey_home']);
 Route::get('/sqa_type', [CustompageController::class, 'SQA_type']);
