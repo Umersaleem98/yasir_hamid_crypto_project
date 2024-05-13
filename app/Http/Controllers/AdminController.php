@@ -121,7 +121,7 @@ class AdminController extends Controller
         $companies = Company::all();
         $promoters = Promoter::all();
         $privatenvestors = PrivateInvestor::all();
-        return view('dashboard_layouts.developer',
+        return view('layouts.edit_project',
                 ['project_type' => $project_type,
                 'project_category' => $project_category,
                 'project_standard' => $project_standard,

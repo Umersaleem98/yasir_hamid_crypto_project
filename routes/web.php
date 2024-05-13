@@ -91,7 +91,6 @@ Route::post('/wallet-addresses', [WalletAddressController::class, 'store'])->nam
 
 // Sub modules end
 
-
 Route::get('/manage_project_home', [HomeController::class, 'manage_project_home']);
 Route::get('/preview_project_home/{id}', [HomeController::class, 'preview_project_home']);
 
@@ -104,11 +103,10 @@ Route::get('/category_page', [CustompageController::class, 'acadmey_home']);
 Route::get('/sqa_type', [CustompageController::class, 'SQA_type']);
 Route::get('/guide_screen_home', [CustompageController::class, 'Guide_screen']);
 
+// Category routes
 
 Route::get('/categories', [CategoryController::class, 'create']);
 Route::post('/categories_store', [CategoryController::class, 'store']);
 Route::get('/categorylist', [CategoryController::class, 'category_list']);
 Route::delete('/categories_delete/{id}', [CategoryController::class, 'destroy']);
-
-// Route::get('/subcategory_page', [CategoryController::class, 'Subcategory']);
 Route::get('/subcategory_page/{id}', [CategoryController::class, 'Subcategory']);

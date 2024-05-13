@@ -6,6 +6,7 @@
     @include('layouts.css')
     <style>
 /* Add custom styles for the scrollable table */
+/* Add custom styles for the scrollable table */
 .scrollable-table {
     overflow-x: auto;
 }
@@ -29,12 +30,14 @@
     background-color: #888; /* Set the color of the scrollbar thumb */
     border-radius: 5px; /* Set the border radius of the thumb */
 }
-th {
-    min-width: 80px; /* Set minimum width */
-    max-width: 200px; /* Set maximum width */
-    width: auto; /* Allow width to adjust based on content */
-}
 
+/* Style the table headers */
+th {
+    font-size: 14px; /* Set smaller font size for headers */
+    font-weight: bold; /* Make headers bold */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent text wrapping in headers */
+}
     </style>
 </head>
 
@@ -77,28 +80,28 @@ th {
                                     </div>
                                     @endif
 
-                                    <div class="card-body">
+                                    <div class="card-body mt-5 ml-2">
                                         <!-- Add the scrollable div -->
                                         <div class="scrollable-table">
                                             <table class="table table-sm table-boardered">
                                                <tr>
                                                 <th>ID</th>
-                                                <th>P-Name</th>
-                                                <th>P-Symbol</th>
-                                                <th>P-Logo</th>
-                                                <th>P-Type</th>
-                                                <th>P-Category</th>
-                                                <th>P-Standard</th>
-                                                <th>P-Platform</th>
-                                                <th>P-Domain</th>
-                                                <th>P-Audit File</th>
-                                                <th>P-Launch Date</th>
-                                                <th>P-Website URL</th>
-                                                <th>P-GitHub URL</th>
-                                                <th>P-Total Supply</th>
-                                                <th>P-Circulating Supply</th>
-                                                <th>P-Whitepaper URL</th>
-                                                <th>P-Social Media</th>
+                                                <th>Project-Name</th>
+                                                <th>Project-Symbol</th>
+                                                <th>Project-Logo</th>
+                                                <th>Project-Type</th>
+                                                <th>Project-Category</th>
+                                                <th>Project-Standard</th>
+                                                <th>Project-Platform</th>
+                                                <th>Project-Domain</th>
+                                                <th>Project-Audit File</th>
+                                                <th>Project-Launch Date</th>
+                                                <th>Project-Website URL</th>
+                                                <th>Project-GitHub URL</th>
+                                                <th>Project-Total Supply</th>
+                                                <th>Project-Circulating Supply</th>
+                                                <th>Project-Whitepaper URL</th>
+                                                <th>Project-Social Media</th>
                                                 <th>Enter Social Media URL</th>
                                                 <th>Developer</th>
                                                 <th>Company</th>
