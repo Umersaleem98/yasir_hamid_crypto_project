@@ -20,6 +20,16 @@ class CoinGeckoService
         $response = $this->client->get('simple/price?ids=bitcoin&vs_currencies=usd');
         return json_decode($response->getBody()->getContents(), true);
     }
+    public function getCoinsDetails(string $currency, string $id)
+    {
+        $response = $this->client->get('coins/markets?vs_currency='.$currency.'&ids='.$id);
+        return json_decode($response->getBody()->getContents(), true);
+    }
+    public function getCoinsList()
+    {
+        $response = $this->client->get('coins/list');
+        return json_decode($response->getBody()->getContents(), true);
+    }
 
     public function getTrendingCoins()
     {
