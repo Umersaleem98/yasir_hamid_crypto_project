@@ -57,20 +57,51 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">crypto</h6>
                 <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projecttypeModal">Project type</a>
-                        <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projectcategoryModal">Project category</a>
-                        <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projectdomainModal">Project Domain</a>
-                        <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projecttakenstandardModal">Taken Standard</a>
-                        <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#blockchainplateform">Block chain plateform</a>
-                        <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#audits">Audits</a>
-                        <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#socialmedia">Social Media</a>
-                        <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#company">Company</a>
+                <a href="{{url('project_type_list')}}" class="collapse-item">Project type List</a>
+
+                <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projectcategoryModal">Project category</a>
+                <a href="{{url('project_category_list')}}" class="collapse-item">Project Category List</a>
+
+                <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projectdomainModal">Project Domain</a>
+                <a href="{{url('project-domains_list')}}" class="collapse-item">Project Domain List</a>
+
+                <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projecttakenstandardModal">Taken Standard</a>
+                <a href="{{url('takenstandard_list')}}" class="collapse-item">Taken Standard List</a>
+
+
+                <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#blockchainplateform">Block chain plateform</a>
+                <a href="{{url('blockchain_platform_list')}}" class="collapse-item"  >Block chain List</a>
+
+
+                <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#audits">Audits</a>
+                <a href="{{url('audit_list')}}" class="collapse-item" >Audits List</a>
+
+
+                <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#socialmedia">Social Media</a>
+                <a href="{{url('socialmedia_list')}}" class="collapse-item">Social Media List</a>
+
+
+                <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#company">Company</a>
+                <a href="{{url('companies_list')}}" class="collapse-item" >Company List</a>
+
                         <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#developer">Developer</a>
+                        <a href="{{url('developers_list')}}" class="collapse-item">Developer List</a>
+
                         <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#promoter">Promoter</a>
+                        <a href="{{url('promoters_list')}}" class="collapse-item" >Promoter List</a>
+
                         <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#privateinvester">Private Invester</a>
+                        <a href="{{url('privateinvester_list')}}" class="collapse-item">Private Invester List</a>
+
                         <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#investercompany">Invester Company</a>
+                        <a href="{{url('investor_companies_list')}}" class="collapse-item" >Invester Company List</a>
+
                         <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#promotertype">Promoter Type</a>
+                        <a href="{{url('promoter_types_list')}}" class="collapse-item" >Promoter Types List</a>
+
                         <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#walletaddress">Wallet Address</a>
-            </div>
+                        <a href="{{url('wallet_addresses_list')}}" class="collapse-item" >Wallet Address List</a>
+                    </div>
         </div>
     </li>
 
@@ -236,14 +267,12 @@
                     @csrf
                     <div class="mb-3">
                       <label  class="form-label">Enter Block chain plateform</label>
-                      <input type="text" class="form-control"  name="name" required>
+                      <input type="text" class="form-control"  name="platformName" required>
                     </div>
-                    <button type="submit"  class="btn btn-primary">Add</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Add</button>
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
-
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>

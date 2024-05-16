@@ -73,21 +73,98 @@ Route::get('/delete_project_user/{id}', [UsersideController::class, 'delete_proj
 Route::get('/edit_product_user/{id}', [UsersideController::class, 'edit_product'])->name('edit_product_user');
 
 // Sub moduls routes
-
+// project type routes
 Route::post('/project-type', [ProjectTypeController::class, 'store'])->name('project-type.store');
-Route::post('/project-category', [ProjectCategoryController::class, 'store'])->name('project-category.store');
+Route::get('/project_type_list', [ProjectTypeController::class, 'project_type_list']);
+Route::get('/projecttype_edit/{id}', [ProjectTypeController::class, 'edit']);
+Route::post('/projecttype_update/{id}', [ProjectTypeController::class, 'update']);
+Route::get('/projecttype_delete/{id}', [ProjectTypeController::class, 'destroy']);
+// project type routes
+Route::post('/project-category', [ProjectCategoryController::class, 'store']);
+Route::get('/project_category_list', [ProjectCategoryController::class, 'project_category_list']);
+Route::get('/project_category_edit/{id}', [ProjectCategoryController::class, 'edit']);
+Route::post('/update_category/{id}', [ProjectCategoryController::class, 'update']);
+Route::get('/deleteCategory/{id}', [ProjectCategoryController::class, 'delete']);
+
+// Projecr domain routes
 Route::post('/project-domains', [ProjectDomainController::class, 'store'])->name('project-domains.store');
+Route::get('/project-domains_list', [ProjectDomainController::class, 'list']);
+Route::get('/project_domains_edit/{id}', [ProjectDomainController::class, 'edit']);
+Route::post('/update_domains/{id}', [ProjectDomainController::class, 'update']);
+Route::get('/deletedimains/{id}', [ProjectDomainController::class, 'delete']);
+
+
 Route::Post('/taken_standard', [TakenStandardController::class, 'store']);
-Route::post('/blockchain-platform', [BlockchainPlatformController::class, 'store'])->name('blockchain.platform.store');
+Route::get('/takenstandard_list', [TakenStandardController::class, 'list']);
+Route::get('/takenStandard_edit/{id}', [TakenStandardController::class, 'edit']);
+Route::post('/update_taken_standard/{id}', [TakenStandardController::class, 'update']);
+Route::get('/takenStandard_delete/{id}', [TakenStandardController::class, 'delete']);
+
+Route::post('/blockchain-platform', [BlockchainPlatformController::class, 'store']);
+Route::get('/blockchain_platform_list', [BlockchainPlatformController::class, 'list']);
+Route::get('/blockchain_platform_edit/{id}', [BlockchainPlatformController::class, 'edit']);
+Route::post('/blockchain_platform_update/{id}', [BlockchainPlatformController::class, 'update']);
+Route::get('/blockchain_platform_delete/{id}', [BlockchainPlatformController::class, 'delete']);
+
+
 Route::post('/audits', [AuditController::class, 'store'])->name('audits.store');
+Route::get('/audit_list', [AuditController::class, 'list']);
+Route::get('/audits_edit/{id}', [AuditController::class, 'edit']);
+Route::post('/audits_update/{id}', [AuditController::class, 'update']);
+Route::get('/audits_delete/{id}', [AuditController::class, 'delete']);
+
 Route::post('/social-media', [SocialMediaController::class, 'store'])->name('social-media.store');
+Route::get('/socialmedia_list', [SocialMediaController::class, 'list']);
+Route::get('/socialmedia_edit/{id}', [SocialMediaController::class, 'edit']);
+Route::post('/socialmedia_update/{id}', [SocialMediaController::class, 'update']);
+Route::get('/socialmedia_delete/{id}', [SocialMediaController::class, 'delete']);
+
 Route::post('/companies', [CompanyController::class, 'store'])->name('companies.store');
-Route::post('/developers', [DeveloperController::class, 'store'])->name('developers.store');
+Route::get('/companies_list', [CompanyController::class, 'list']);
+Route::get('/companies_edit/{id}', [CompanyController::class, 'edit']);
+Route::post('/companies_update/{id}', [CompanyController::class, 'update']);
+Route::get('/companies_delete/{id}', [CompanyController::class, 'delete']);
+
+Route::post('/developers', [DeveloperController::class, 'store']);
+Route::get('/developers_list', [DeveloperController::class, 'list']);
+Route::get('/developers_edit/{id}', [DeveloperController::class, 'edit']);
+Route::post('/developers_update/{id}', [DeveloperController::class, 'update']);
+Route::get('/developers_delete/{id}', [DeveloperController::class, 'delete']);
+
+
 Route::post('/promoters', [PromoterController::class, 'store'])->name('promoters.store');
+Route::get('/promoters_list', [PromoterController::class, 'list']);
+Route::get('/promoters_edit/{id}', [PromoterController::class, 'edit']);
+Route::post('/promoters_update/{id}', [PromoterController::class, 'update']);
+Route::get('/promoters_delete/{id}', [PromoterController::class, 'delete']);
+
+
 Route::post('/private-investors', [PrivateInvestorController::class, 'store'])->name('private_investors.store');
+Route::get('/privateinvester_list', [PrivateInvestorController::class, 'list']);
+Route::get('/PrivateInvestors_edit/{id}', [PrivateInvestorController::class, 'edit']);
+Route::post('/PrivateInvestors_update/{id}', [PrivateInvestorController::class, 'update']);
+Route::get('/privateinvester_delete/{id}', [PrivateInvestorController::class, 'delete']);
+
+
 Route::post('/investor-companies', [InvestorCompanyController::class, 'store'])->name('investor_companies.store');
+Route::get('/investor_companies_list', [InvestorCompanyController::class, 'list']);
+Route::get('/investor_companies_edit/{id}', [InvestorCompanyController::class, 'edit']);
+Route::post('/investor_companies_update/{id}', [InvestorCompanyController::class, 'update']);
+Route::get('/investor_companies_delete/{id}', [InvestorCompanyController::class, 'delete']);
+
+
 Route::post('/promoter-types', [PromoterTypeController::class, 'store'])->name('promoter_types.store');
+Route::get('/promoter_types_list', [PromoterTypeController::class, 'list']);
+Route::get('/promoter_types_edit/{id}', [PromoterTypeController::class, 'edit']);
+Route::post('/promoter_types_update/{id}', [PromoterTypeController::class, 'update']);
+Route::get('/promoter_types_delete/{id}', [PromoterTypeController::class, 'delete']);
+
+
 Route::post('/wallet-addresses', [WalletAddressController::class, 'store'])->name('wallet_addresses.store');
+Route::get('/wallet_addresses_list', [WalletAddressController::class, 'list']);
+Route::get('/wallet_addresses_edit/{id}', [WalletAddressController::class, 'edit']);
+Route::post('/wallet_addresses_update/{id}', [WalletAddressController::class, 'update']);
+Route::get('/wallet_addresses_delete/{id}', [WalletAddressController::class, 'delete']);
 
 // Sub modules end
 
