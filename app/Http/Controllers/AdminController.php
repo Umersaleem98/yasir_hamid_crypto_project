@@ -161,10 +161,16 @@ class AdminController extends Controller
         return view('template.guide_screen');
     }
 
+    public function admin_list()
+    {
+        $admins = User::where('user_type', 'admin')->get();
+        return view('layouts.userslist', compact('admins'))->with('success', 'Admin status changes successfully.');
+    }
+
     public function user_list()
     {
-        $users = User::all();
-        return view('layouts.userslist', compact('users'));
+        $users = User::where('user_type', 'user')->get();
+        return view('layouts.users.users_list', compact('users'))->with('success', 'User status change successfully.');
     }
     public function user_add()
     {
@@ -203,7 +209,7 @@ class AdminController extends Controller
 
         // Check if user exists
         if (!$user) {
-            return redirect()->back()->with('error', 'User not found');
+            return redirect()->back()->with('success', 'Blockchain platform added successfully.');
         }
 
         // Validate the request data
@@ -239,7 +245,7 @@ class AdminController extends Controller
 
         // Check if user exists
         if (!$user) {
-            return redirect()->back()->with('error', 'User not found');
+            return redirect()->back()->with('success', 'User not delete successfully.');
         }
 
         // Delete the user

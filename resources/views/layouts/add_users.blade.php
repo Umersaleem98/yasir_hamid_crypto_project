@@ -27,6 +27,18 @@
 
                 <div class="container-fluid">
                     <div class="row">
+                        @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if (session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('error') }}
+                        </div>
+                    @endif
+
                         <div class="col-md-6 ml-5">
                             <form action="add_users" method="post">
                                 @csrf

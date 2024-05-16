@@ -110,13 +110,28 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Category</span>
+            <span>Guides Category</span>
         </a>
         <div id="collapsethree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Add Project</h6>
-                <a class="collapse-item" href="{{url('categories')}}">Add Category</a>
-                <a class="collapse-item" href="{{url('categorylist')}}">Category List</a>
+                <h6 class="collapse-header">Add Guides</h6>
+                <a class="collapse-item" href="{{url('categories')}}">Guide Category</a>
+                <a class="collapse-item" href="{{url('categorylist')}}">Guides List</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#admin"
+            aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Admins</span>
+        </a>
+        <div id="admin" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Admin Manage</h6>
+                <a class="collapse-item" href="{{url('add_users')}}">Add User</a>
+                <a class="collapse-item" href="{{url('admin_list')}}">Users List</a>
             </div>
         </div>
     </li>
@@ -129,9 +144,9 @@
         </a>
         <div id="user" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Users</h6>
+                <h6 class="collapse-header">Admin Manage</h6>
                 <a class="collapse-item" href="{{url('add_users')}}">Add User</a>
-                <a class="collapse-item" href="{{url('users')}}">Users List</a>
+                <a class="collapse-item" href="{{url('user_list')}}">Users List</a>
             </div>
         </div>
     </li>

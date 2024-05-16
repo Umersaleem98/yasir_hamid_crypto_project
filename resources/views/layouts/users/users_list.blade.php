@@ -51,18 +51,18 @@
                                     <th>Delete</th>
                                     <th>Edit</th>
                                 </tr>
-                                @foreach ($admins as $admin)
+                                @foreach ($users as $user)
                                 <tr>
-                                    <td>{{$admin->id}}</td>
-                                    <td>{{$admin->name}}</td>
-                                    <td>{{$admin->email}}</td>
-                                    <td>{{$admin->phone}}</td>
-                                    <td>{{$admin->user_type}}</td>
+                                    <td>{{$user->id}}</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->phone}}</td>
+                                    <td>{{$user->user_type}}</td>
                                     <td>
-                                        <a href="{{ url('delete_users', ['id' => $admin->id]) }}" class="btn btn-danger">Delete</a>
+                                        <a href="{{ url('delete_users', ['id' => $user->id]) }}" class="btn btn-danger">Delete</a>
                                     </td>
                                     <td>
-                                        <a href="{{ url('edit_users', ['id' => $admin->id]) }}" class="btn btn-info">Edit</a>
+                                        <a href="{{ url('edit_users', ['id' => $user->id]) }}" class="btn btn-info">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
