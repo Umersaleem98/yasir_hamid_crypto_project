@@ -80,23 +80,25 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-md-4">
-                                                    {{-- <label for="selectProjectType" class="form-label">Select Project Type</label><br> --}}
                                                     <select name="selectProjectType" id="selectProjectType" class="form-select" aria-label="Select Project Type">
                                                         <option value="" selected disabled>Select Project Type</option>
                                                         @foreach($project_type as $type)
                                                         <option value="{{$type->id}}">{{$type->categoryName}}</option>
                                                         @endforeach
                                                     </select>
+                                                    <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projecttypeModal">Add Project type</a>
                                                 </div>
+
                                                 <div class="col-md-4">
-                                                    {{-- <label for="selectProjectType" class="form-label">Select Project Category</label><br> --}}
-                                                    <select name="selectProjectCategory" id="" class="form-select" aria-label="Select Project Type">
+                                                    <select name="selectProjectCategory" id="selectProjectCategory" class="form-select" aria-label="Select Project Type">
                                                         <option value="" selected disabled>Select Project Category</option>
                                                         @foreach($project_category as $cate)
-                                                        <option value="{{$cate->id}}">{{$cate->categoryName}}</option>
+                                                        <option value="{{$cate->id}}">{{$cate->project_category}}</option>
                                                         @endforeach
                                                     </select>
+                                                    <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projectcategoryModal">Add Project category</a>
                                                 </div>
+
                                                 <div class="col-md-4">
                                                     {{-- <label for="selectProjectType" class="form-label">Select Project Standard</label><br> --}}
                                                     <select name="selectProjectStandard" id="" class="form-select" aria-label="Select Project Type">
@@ -105,6 +107,7 @@
                                                         <option value="{{$p_standard->id}}">{{$p_standard->name}}</option>
                                                         @endforeach
                                                     </select>
+                                                    <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#projecttakenstandardModal">Add Taken Standard</a>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
@@ -169,6 +172,7 @@
                                                         <option value="{{$developer->id}}">{{$developer->name}}</option>
                                                         @endforeach
                                                     </select>
+                                                    <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#developer">Add Developer</a>
                                                 </div>
                                                 <div class="col-md-4">
                                                     {{-- <label for="" class="form-label">Select  Company </label><br> --}}
@@ -178,6 +182,7 @@
                                                         <option value="{{$companie->id}}">{{$companie->name}}</option>
                                                         @endforeach
                                                     </select>
+                                                    <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#company">Add Company</a>
                                                 </div>
                                             </div>
                                             <h3 class="text-primary underline">Promoter Information</h3>
@@ -190,6 +195,7 @@
                                                         <option value="{{$promoter->id}}">{{$promoter->name}}</option>
                                                         @endforeach
                                                     </select>
+                                                    <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#promoter">Add Promoter</a>
                                                 </div>
                                             </div>
                                             <h3 class="text-primary underline">Private Investor Information</h3>
@@ -202,6 +208,7 @@
                                                         <option value="{{$privatenvestor->id}}">{{$privatenvestor->name}}</option>
                                                         @endforeach
                                                     </select>
+                                                    <a id="openModalButton" class="collapse-item" data-bs-toggle="modal" data-bs-target="#privateinvester">Add Private Invester</a>
                                                 </div>
                                                 <div class="col-md-4">
                                                     {{-- <label  class="form-label">Private Investor Token Release</label> --}}

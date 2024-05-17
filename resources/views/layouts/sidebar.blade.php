@@ -181,7 +181,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
                     <button type="submit" name="submit" form="addCategoryForm" class="btn btn-primary">Add</button>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
@@ -207,7 +207,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
 
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
@@ -234,7 +234,7 @@
 
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -262,7 +262,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
 
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
@@ -312,7 +312,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -340,7 +340,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -383,7 +383,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -427,7 +427,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
 
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
@@ -468,7 +468,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
 
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
@@ -510,7 +510,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
 
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
@@ -551,7 +551,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -579,7 +579,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -614,7 +614,7 @@
                   </form>
                 </div>
                 <div class="modal-footer justify-content-end">
-                    <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button>
+                    {{-- <button type="submit" form="addCategoryForm" class="btn btn-info">Update</button> --}}
 
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>

@@ -13,8 +13,6 @@ class TakenStandardController extends Controller
         $takenStandard = new TakenStandard;
         $takenStandard->name = $request->name;
         $takenStandard->save();
-
-        dd($takenStandard);
         return redirect()->back()->with('success', 'Taken Standard created successfully.');
     }
 
