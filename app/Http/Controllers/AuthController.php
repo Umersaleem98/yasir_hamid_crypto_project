@@ -43,9 +43,9 @@ class AuthController extends Controller
             if ($user->user_type === 'admin') {
                 // Redirect admin users to the admin dashboard
                 return view('dashboard');
-            } elseif ($user->user_type === 'user') {
+            } elseif ($user->user_type === 'manager') {
                 // Redirect regular users to their dashboard
-                return view('user_dashboard');
+                return view('manager_dashboard');
             } else {
                 // Handle other user types or scenarios here
                 return redirect()->intended('/');

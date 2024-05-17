@@ -42,7 +42,7 @@ Route::middleware('auth.check')->group(function () {
             Route::get('/admin', [AdminController::class, 'index'])->name('admin');
             // Other admin routes...
         } elseif ($user->usertype === 'user') {
-            Route::get('/user_dashboard', [UserController::class, 'user_dashboard'])->name('user_dashboard');
+            Route::get('/manager_dashboard', [UserController::class, 'manager_dashboard'])->name('manager_dashboard');
             // Other user routes...
         }
     }
