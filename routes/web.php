@@ -59,9 +59,7 @@ Route::get('/edit_product/{id}', [AdminController::class, 'edit_product'])->name
 Route::get('/admin_list', [AdminController::class, 'admin_list']);
 Route::get('/add_users', [AdminController::class, 'user_add']);
 Route::post('/add_users', [AdminController::class, 'user_store']);
-
 Route::get('/user_list', [AdminController::class, 'user_list']);
-
 
 
 Route::get('/edit_users/{id}', [AdminController::class, 'user_edit']);
